@@ -8,15 +8,20 @@ import styled from 'styled-components';
 import { register } from '../../actions/auth';
 
 const Container = styled.form`
-width: 20%;
+width: 50vh;
 margin: 0 auto;
+
+
+@media (max-width: 800px) {
+   width: 90%;
+}
+
 `
 const Input = styled.input`
 box-sizing: border-box;
 background-color: rgb(247, 247, 247);
 color: rgb(102, 102, 102);
 font-size: 24px;
-height: 100%;
 text-align: left;
 width: 100%;
 border-radius: 10px;
@@ -32,9 +37,16 @@ transition: all 0.3s cubic-bezier(0.497, 0.51, 0.25, 1) 0s;
 &::placeholder {
    color: #DBDBDB;
 }
+
+@media(max-width: 800px) {
+  font-size: 18px;
+  width: 100%;
+}
+
 `
 
 const Button = styled.input`
+box-sizing: border-box;
 background-color: #00debc;
 height: 50px;
 width: 100%;
@@ -48,12 +60,21 @@ border-radius: 8px;
 cursor: pointer;
 text-decoration: none;
 transition: all .2s ease-in;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
 
 &:hover {
    -webkit-box-shadow: 0px 8px 52px -11px rgba(0,0,0,0.44);
    -moz-box-shadow: 0px 8px 52px -11px rgba(0,0,0,0.44);
    box-shadow: 0px 8px 52px -11px rgba(0,0,0,0.44);
 }
+
+@media(max-width: 800px) {
+   font-size: 21px;
+   padding: 12px 0;
+   width: 97%;
+ }
 `
 
 const Title = styled.h3`

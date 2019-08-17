@@ -59,6 +59,9 @@ border-radius: 8px;
 cursor: pointer;
 text-decoration: none;
 transition: all .2s ease-in;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
 
 &:hover {
    -webkit-box-shadow: 0px 8px 52px -11px rgba(0,0,0,0.44);
@@ -71,6 +74,7 @@ transition: all .2s ease-in;
    padding: 12px 0;
    width: 97%;
  }
+
 `
 
 const Title = styled.h3`
