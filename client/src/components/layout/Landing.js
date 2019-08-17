@@ -5,12 +5,16 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Container = styled.div`
+box-sizing: border-box;
 width: 90%;
-max-width: 1080px;
 margin: 0 auto;
 text-align: center;
 
+@media(max-width: 800px) {
+   width: 100%;
+}
 `
+
 
 const Title = styled.h1`
 width: 100%;
@@ -22,7 +26,7 @@ color: #00DEBC;
 
 @media(max-width: 800px) {
    padding-top: 30px;
-   font-size: 50px;
+   font-size: 40px;
    margin: 0 auto;
 }
 `
@@ -34,6 +38,11 @@ width: 80%;
 margin: 0 auto;
 padding-top: 20px;
 color: #00DEBC;
+
+@media(max-width: 500px) {
+   font-size: 35px;
+   padding-bottom: 50px;
+}
 `
 
 const ValueStrong = styled.span`
@@ -49,6 +58,10 @@ transition: background-size 1s ease 0s;
 
 &:hover {
  background-size: 0% 94%;
+}
+
+@media(max-width: 500px) {
+   font-size: 35px;
 }
 `
 
