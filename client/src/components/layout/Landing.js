@@ -7,6 +7,7 @@ import styled from 'styled-components';
 const Container = styled.div`
 box-sizing: border-box;
 width: 90%;
+max-width: 1080px
 margin: 0 auto;
 text-align: center;
 
@@ -37,6 +38,7 @@ text-align: ${props => props.contentText ? "left" : "center"}
 width: 80%;
 margin: 0 auto;
 padding-top: 20px;
+padding-bottom: 50px;
 color: #00DEBC;
 
 @media(max-width: 500px) {
