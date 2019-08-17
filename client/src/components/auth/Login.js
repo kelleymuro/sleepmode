@@ -38,13 +38,14 @@ transition: all 0.3s cubic-bezier(0.497, 0.51, 0.25, 1) 0s;
 }
 
 @media(max-width: 800px) {
-  font-size: 21px;
-  width: 80%;
+  font-size: 18px;
+  width: 100%;
 }
 
 `
 
 const Button = styled.input`
+box-sizing: border-box;
 background-color: #00debc;
 height: 50px;
 width: 100%;

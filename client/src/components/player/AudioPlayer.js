@@ -9,30 +9,30 @@ const options = {
    //audio lists model
    audioLists: [
      {
-       name: "高尚",
-       singer: "薛之谦",
-       cover: "//cdn.lijinke.cn/nande.jpg",
-       musicSrc: "//cdn.lijinke.cn/gaoshang.mp3",
+       name: "Sleepmode Ethereal",
+       singer: "Sleepmode.fm",
+       cover: "https://images.unsplash.com/photo-1565378434747-262417385c7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+       musicSrc: "https://s3-us-west-1.amazonaws.com/sleepmode.fm/Ethereal+Track+1.mp3",
      },
      {
-       name: "Despacito",
-       singer: "Luis Fonsi",
-       cover: "http://res.cloudinary.com/alick/image/upload/v1502689731/Despacito_uvolhp.jpg",
+       name: "Sleepmode Ethereal",
+       singer: "Sleepmode.fm",
+       cover: "https://images.unsplash.com/photo-1565378434747-262417385c7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
        musicSrc: () => {
-         return Promise.resolve("http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3")
+         return Promise.resolve("https://s3-us-west-1.amazonaws.com/sleepmode.fm/Ethereal+Track+2.mp3")
        },
      },
      {
-       name: "Bedtime Stories",
-       singer: "Jay Chou",
-       cover: "http://res.cloudinary.com/alick/image/upload/v1502375978/bedtime_stories_bywggz.jpg",
-       musicSrc: "http://res.cloudinary.com/alick/video/upload/v1502375674/Bedtime_Stories.mp3"
+       name: "Sleepmode Ethereal",
+       singer: "Sleepmode.fm",
+       cover: "https://images.unsplash.com/photo-1565378434747-262417385c7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+       musicSrc: "https://s3-us-west-1.amazonaws.com/sleepmode.fm/Ethereal+Track+3.mp3"
      },
      {
-       name: "难得",
-       singer: "安来宁",
-       cover: "//cdn.lijinke.cn/nande.jpg",
-       musicSrc: "//cdn.lijinke.cn/nande.mp3"
+      name: "Sleepmode Ethereal",
+       singer: "Sleepmode.fm",
+       cover: "https://images.unsplash.com/photo-1565378434747-262417385c7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+       musicSrc: "https://s3-us-west-1.amazonaws.com/sleepmode.fm/Ethereal+Track+4.mp3"
      }
    ],
  
@@ -68,10 +68,10 @@ const options = {
    remove: true,
  
    //audio controller initial position    [ type `Object` default '{top:0,left:0}' ]
-  //  defaultPosition: {
-  //    top: 620,
-  //    left: 250
-  //  },
+   defaultPosition: {
+     top: 10,
+     left: 10
+   },
  
    // play mode text config of the audio player
    playModeText: {

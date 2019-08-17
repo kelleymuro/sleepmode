@@ -74,7 +74,7 @@ padding: 10px 15px;
 border-radius: 8px;
 cursor: pointer;
 transition: all .2s ease-in;
-
+-webkit-appearance: none;
 &:hover {
    background-color:#00BEB3;
 }
