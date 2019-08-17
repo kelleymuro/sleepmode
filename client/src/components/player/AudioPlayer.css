@@ -18,6 +18,13 @@ transition: all .2s ease-in;
   box-shadow: 6px 21px 71px -38px rgba(0,222,189,1);
 }
 
+@media screen and (max-width: 500px) {
+  .playAudio {
+    top: 350px;
+    left: 100px;
+  }
+}
+
 
 .react-jinke-music-player-main ul, 
 .react-jinke-music-player-main li {

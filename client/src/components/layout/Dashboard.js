@@ -10,6 +10,7 @@ import AudioPlayer from '../player/AudioPlayer';
 
 
 const Container = styled.div`
+box-sizing: border-box;
 width: 90%;
 max-width: 1080px;
 margin: 0 auto;
@@ -24,6 +25,12 @@ font-family: 'PT Sans', sans-serif;
 font-size: 73px;
 font-weight: 700;
 color: #00DEBC;
+
+@media(max-width: 800px) {
+   padding-top: 30px;
+   font-size: 50px;
+   margin: 0 auto;
+}
 `
 
 const ValueProp = styled.h3`
@@ -49,6 +56,11 @@ transition: background-size 1s ease 0s;
 &:hover {
  background-size: 0% 94%;
 }
+
+@media(max-width: 800px) {
+   font-size: 40px;
+}
+
 `
 
 const Button = styled.button`

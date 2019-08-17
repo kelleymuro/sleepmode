@@ -68,10 +68,10 @@ const options = {
    remove: true,
  
    //audio controller initial position    [ type `Object` default '{top:0,left:0}' ]
-   defaultPosition: {
-     top: 500,
-     left: 550
-   },
+  //  defaultPosition: {
+  //    top: 620,
+  //    left: 250
+  //  },
  
    // play mode text config of the audio player
    playModeText: {
