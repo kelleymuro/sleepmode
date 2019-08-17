@@ -5,7 +5,7 @@ const db = config.get('mongoURI');
 const connectDB = async () => {
    try {
       await mongoose.connect(db, {
-         // Below gets rid of a server error for legacyt code
+         // Below gets rid of a server error for legacy code
          useNewUrlParser: true,
          useCreateIndex: true,
          useFindAndModify: false
