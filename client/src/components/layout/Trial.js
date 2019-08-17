@@ -1,7 +1,5 @@
 import React, { Fragment, Component } from 'react'
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import AudioPlayer from '../player/AudioPlayer';
 
@@ -90,7 +88,7 @@ height: 50vh;
 `
 
 
-const Dashboard = ({ auth: { user, name }}) => {
+const Trial = () => {
    return (
     <Fragment>
        <Container>
@@ -101,12 +99,6 @@ const Dashboard = ({ auth: { user, name }}) => {
   
   )}
  
-  Dashboard.propTypes = {
-     auth: PropTypes.object.isRequired
-  }
+  
 
-  const mapStateToProps = state => ({
-     auth: state.auth
-  })
-
-export default connect(mapStateToProps) (Dashboard);
+export default connect(mapStateToProps) (Trial);
