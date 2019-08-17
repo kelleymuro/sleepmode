@@ -1,0 +1,4 @@
+{
+   "mongoURI": "mongodb+srv://kelleymuro:Reachenterprise1@sleepmode-cluster-tnsyo.mongodb.net/test?retryWrites=true&w=majority",
+   "jwtSecret": "deepdarksecretkey"
+}
