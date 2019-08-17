@@ -4,9 +4,6 @@ import styled from 'styled-components';
 import AudioPlayer from '../player/AudioPlayer';
 
 
-
-
-
 const Container = styled.div`
 box-sizing: border-box;
 width: 90%;
@@ -101,4 +98,4 @@ const Trial = () => {
  
   
 
-export default connect(mapStateToProps) (Trial);
+export default Trial;
