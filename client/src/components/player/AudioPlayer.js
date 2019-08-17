@@ -9,13 +9,13 @@ const options = {
    //audio lists model
    audioLists: [
      {
-       name: "Sleepmode Ethereal",
+       name: "Sleepmode Ethereal Track 1",
        singer: "Sleepmode.fm",
        cover: "https://images.unsplash.com/photo-1565378434747-262417385c7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
        musicSrc: "https://s3-us-west-1.amazonaws.com/sleepmode.fm/Ethereal+Track+1.mp3",
      },
      {
-       name: "Sleepmode Ethereal",
+       name: "Sleepmode Ethereal Track 2",
        singer: "Sleepmode.fm",
        cover: "https://images.unsplash.com/photo-1565378434747-262417385c7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
        musicSrc: () => {
@@ -23,13 +23,13 @@ const options = {
        },
      },
      {
-       name: "Sleepmode Ethereal",
+       name: "Sleepmode Ethereal Track 3",
        singer: "Sleepmode.fm",
        cover: "https://images.unsplash.com/photo-1565378434747-262417385c7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
        musicSrc: "https://s3-us-west-1.amazonaws.com/sleepmode.fm/Ethereal+Track+3.mp3"
      },
      {
-      name: "Sleepmode Ethereal",
+      name: "Sleepmode Ethereal Track 4",
        singer: "Sleepmode.fm",
        cover: "https://images.unsplash.com/photo-1565378434747-262417385c7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
        musicSrc: "https://s3-us-west-1.amazonaws.com/sleepmode.fm/Ethereal+Track+4.mp3"
