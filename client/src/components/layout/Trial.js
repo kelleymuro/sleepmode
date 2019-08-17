@@ -1,10 +1,16 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, Component } from 'react'
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import AudioPlayer from '../player/AudioPlayer';
+
+
+
+
 
 const Container = styled.div`
+box-sizing: border-box;
 width: 90%;
 max-width: 1080px;
 margin: 0 auto;
@@ -50,9 +56,14 @@ transition: background-size 1s ease 0s;
 &:hover {
  background-size: 0% 94%;
 }
+
+@media(max-width: 800px) {
+   font-size: 40px;
+}
+
 `
 
-const Button = styled(Link)`
+const Button = styled.button`
 margin: 30px auto;
 background-color: #00debc;
 border: none;
@@ -63,7 +74,7 @@ padding: 10px 15px;
 border-radius: 8px;
 cursor: pointer;
 transition: all .2s ease-in;
-
+-webkit-appearance: none;
 &:hover {
    background-color:#00BEB3;
 }
@@ -79,25 +90,23 @@ height: 50vh;
 `
 
 
-
-const Landing = ({ isAuthenticated }) => {
-  return (
-   <Fragment>
-      <Container>
-         <Title>sleepmode.fm</Title>
-         <ValueProp> A playlist that will help you <ValueStrong>sleep</ValueStrong>, <ValueStrong>calm down</ValueStrong>, and even <ValueStrong>lucid dream.</ValueStrong> </ValueProp>
-         <Button to="/trial">Start Listening Free</Button>
-      </Container>
-   </Fragment>
+const Dashboard = ({ auth: { user, name }}) => {
+   return (
+    <Fragment>
+       <Container>
+          <Title>Welcome to sleepmode.fm</Title>
+       </Container>
+       <AudioPlayer/>
+    </Fragment>
+  
+  )}
  
- )}
+  Dashboard.propTypes = {
+     auth: PropTypes.object.isRequired
+  }
 
- Landing.propTypes = {
-    isAuthenticated: PropTypes.bool
- }
+  const mapStateToProps = state => ({
+     auth: state.auth
+  })
 
-const mapStateToProps = state => ({
-   isAuthenticated: state.auth.isAuthenticated
-});
-
-export default connect(mapStateToProps) (Landing);
+export default connect(mapStateToProps) (Dashboard);
