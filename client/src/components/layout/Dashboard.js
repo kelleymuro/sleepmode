@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react'
+import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -33,14 +33,14 @@ color: #00DEBC;
 }
 `
 
-const ValueProp = styled.h3`
-font-size: ${props => props.contentText ? "30px" : "55px"}
-text-align: ${props => props.contentText ? "left" : "center"}
-width: 80%;
-margin: 0 auto;
-padding-top: 20px;
-color: #00DEBC;
-`
+// const ValueProp = styled.h3`
+// font-size: ${props => props.contentText ? "30px" : "55px"}
+// text-align: ${props => props.contentText ? "left" : "center"}
+// width: 80%;
+// margin: 0 auto;
+// padding-top: 20px;
+// color: #00DEBC;
+// `
 
 const ValueStrong = styled.span`
 font-size: 55px;
@@ -63,31 +63,31 @@ transition: background-size 1s ease 0s;
 
 `
 
-const Button = styled.button`
-margin: 30px auto;
-background-color: #00debc;
-border: none;
-color: white;
-font-family: 'PT Sans', sans-serif;
-font-size: 22px;
-padding: 10px 15px;
-border-radius: 8px;
-cursor: pointer;
-transition: all .2s ease-in;
--webkit-appearance: none;
-&:hover {
-   background-color:#00BEB3;
-}
-`
+// const Button = styled.button`
+// margin: 30px auto;
+// background-color: #00debc;
+// border: none;
+// color: white;
+// font-family: 'PT Sans', sans-serif;
+// font-size: 22px;
+// padding: 10px 15px;
+// border-radius: 8px;
+// cursor: pointer;
+// transition: all .2s ease-in;
+// -webkit-appearance: none;
+// &:hover {
+//    background-color:#00BEB3;
+// }
+// `
 
-const Content = styled.div`
-display: flex;
-align-items: center;
-width: 100%;
-margin: 100px auto;
-background-color: #00debc;
-height: 50vh;
-`
+// const Content = styled.div`
+// display: flex;
+// align-items: center;
+// width: 100%;
+// margin: 100px auto;
+// background-color: #00debc;
+// height: 50vh;
+// `
 
 
 const Dashboard = ({ auth: { user, name }}) => {

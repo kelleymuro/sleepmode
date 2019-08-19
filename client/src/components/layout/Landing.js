@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+
 const Container = styled.div`
 box-sizing: border-box;
 width: 90%;
@@ -84,14 +85,14 @@ transition: all .2s ease-in;
 }
 `
 
-const Content = styled.div`
-display: flex;
-align-items: center;
-width: 100%;
-margin: 100px auto;
-background-color: #00debc;
-height: 50vh;
-`
+// const Content = styled.div`
+// display: flex;
+// align-items: center;
+// width: 100%;
+// margin: 100px auto;
+// background-color: #00debc;
+// height: 50vh;
+// `
 
 
 

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
 import styled from 'styled-components';
+import Payments from '../Payments';
 
 const Nav = styled.div`
 display: flex;
@@ -41,11 +42,6 @@ transition: all .2s ease-in;
 }
 `
 
-const Title = styled.h1`
-   font-size: 18px;
-   text-align: center;
-   color: black;
-`
 
 const Navbar = ({ auth: { isAuthenticated, loading}, logout }) => {
   
@@ -59,8 +55,9 @@ const Navbar = ({ auth: { isAuthenticated, loading}, logout }) => {
 
    const guestLinks = (
       <Fragment>
-          <NavItem to='/register' cta>Create An Account</NavItem>
+          <NavItem to='/register'>Create An Account</NavItem>
           <NavItem to='/login'>Login</NavItem>
+          {/* <Payments/> */}
       </Fragment>
      
    )
