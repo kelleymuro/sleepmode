@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import StripeCheckout from 'react-stripe-checkout';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
+import { handleToken } from '../actions/tokens';
 
 const Button = styled.button`
 background-color: #00debc;
@@ -27,23 +30,27 @@ transition: all .2s ease-in;
    
   } 
 }
-
 `
 
-class Payments extends Component {
-   render() {
+const Payments = ({ handleToken }) => {
+
       return (
          <StripeCheckout
             name="Sleepmode.fm Premium"
             description="This will give you unlimited access to Sleepmode.fm"
             amount={4900}
-            token={ token => console.log(token)}
+            token={ token => handleToken(token)}
             stripeKey={process.env.REACT_APP_STRIPE_KEY}
          >
          <Button>Checkout Now</Button>
          </StripeCheckout>
       );
-   }
 }
 
-export default Payments;
+Payments.propTypes = {
+   handleToken: PropTypes.func.isRequired,
+}
+
+
+export default connect(null, {handleToken}) (Payments);
+

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
 import styled from 'styled-components';
-import Payments from '../Payments';
 
 const Nav = styled.div`
 display: flex;
@@ -47,6 +46,7 @@ const Navbar = ({ auth: { isAuthenticated, loading}, logout }) => {
   
    const authLinks = (
       <Fragment>
+         <NavItem to='/dashboard'>Home</NavItem>
           <NavItem to='/settings'>Settings</NavItem>
           <NavItem onClick={logout} to="#">Logout</NavItem>
       </Fragment>
@@ -55,9 +55,9 @@ const Navbar = ({ auth: { isAuthenticated, loading}, logout }) => {
 
    const guestLinks = (
       <Fragment>
-          <NavItem to='/register'>Create An Account</NavItem>
+         <NavItem to='/'>Home</NavItem>
+         <NavItem to='/register'>Create An Account</NavItem>
           <NavItem to='/login'>Login</NavItem>
-          {/* <Payments/> */}
       </Fragment>
      
    )

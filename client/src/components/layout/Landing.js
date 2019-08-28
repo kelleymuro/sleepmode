@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -97,6 +97,11 @@ transition: all .2s ease-in;
 
 
 const Landing = ({ isAuthenticated }) => {
+
+   if(isAuthenticated) {
+      return <Redirect to='/dashboard'/>;
+   }
+
   return (
    <Fragment>
       <Container>

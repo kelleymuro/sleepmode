@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react'
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Link, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Payment from '../Payments';
 import AudioPlayer from '../player/AudioPlayer';
 
 
@@ -91,11 +92,15 @@ transition: background-size 1s ease 0s;
 
 
 const Dashboard = ({ auth: { user, name }}) => {
+   
+  
+
    return (
     <Fragment>
        <Container>
           <Title>Welcome to sleepmode.fm</Title>
           <ValueStrong>{name}</ValueStrong>
+       <Payment/>
        </Container>
        <AudioPlayer/>
     </Fragment>
@@ -103,11 +108,13 @@ const Dashboard = ({ auth: { user, name }}) => {
   )}
  
   Dashboard.propTypes = {
-     auth: PropTypes.object.isRequired
+     auth: PropTypes.object.isRequired,
+     billing: PropTypes.bool
   }
 
   const mapStateToProps = state => ({
-     auth: state.auth
+     auth: state.auth,
+     billing: state.billing
   })
 
 export default connect(mapStateToProps) (Dashboard);

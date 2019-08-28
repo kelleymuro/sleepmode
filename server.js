@@ -2,14 +2,17 @@ const express = require('express');
 const app = express();
 const connectDB  = require('./config/db');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 connectDB();
 
 // Init Middleware
+app.use(bodyParser.json());
 app.use(express.json({ extended: false }));
 
 app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/stripe', require('./routes/billingRoutes'));
 
 
 

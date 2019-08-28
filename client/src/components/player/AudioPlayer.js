@@ -2,7 +2,7 @@ import React from 'react'
 import ReactJkMusicPlayer from 'react-jinke-music-player';
 import swal from 'sweetalert';
 import { createRandomNum } from '../../utils/createRandomNum';
-import AudioPlayerCSS from './AudioPlayer.css';
+import './AudioPlayer.css';
 
 
 const options = {
@@ -110,7 +110,7 @@ const options = {
    once: true,
  
    //Whether the audio is played after loading is completed. [type `Boolean` default 'true']
-   autoPlay: true,
+   autoPlay: false,
  
    //Whether you can switch between two modes, full => mini  or mini => full   [type 'Boolean' default 'true']
    toggleMode: true,
